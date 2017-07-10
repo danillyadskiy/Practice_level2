@@ -1,0 +1,567 @@
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+$font-title: 'Josefin Slab', serif;
+
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+$openSans: 'Open Sans', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$josefin: 'Josefin Slab', serif;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* universal */
+
+html {
+  overflow-y: scroll;
+  
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+.hero-unit {
+  background-color: #FDFDFD;
+} 
+.content {
+  min-width: 700px
+}
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-style: normal;
+  font-family: $font-title;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: zz;
+  font-family: 'Raleway', sans-serif;
+}
+h3 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
+  text-align: justify;
+  font-weight: normal;
+  color: zz;
+  font-family: 'Josefin Slab', serif;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* header */
+
+.container_form {
+  width: 700px;
+}
+.navbar .navbar-fixed-top {
+  max-width: 100%;
+  min-width: 820px;
+  background-color: #E9F8FD;
+}
+.navbar-custom {
+  background-color: #E9F8FD;
+  border-color: #358EA7;
+}
+.nav_links {
+  font-family: $josefin;
+  font-weight: bold;
+  color: #01516B;
+}
+  .nav_links a {
+    color: #01516B;
+
+  }
+#nav_refs li {
+  color: #01516B;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  max-height: 30px;
+  color: #01516B;
+  font-family: $josefin;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #123E4C;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin: 45px 10% 0 10%;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: #777;
+  a {
+    color: $gray;
+    &:hover {
+      color: #222;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.root_body {
+  min-width: 700px;
+  background-color: #E8F7FC;
+  /* background-image: url("bg_main.jpg"); 
+  background-size: cover; */
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #8B0000;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+.div_full_describtion {
+  min-width: 1000px;
+  margin-left: 10px;
+}
+.div_descr_1 {
+  float: top;
+  min-width: 100%;
+  max-width: 100%;
+  img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+.div_descr_2 {
+  float: right;
+  text-align: justify;
+  min-width: 96%;
+  max-width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+}
+.div_descr_3 {
+  float: left;
+  background-color: #EEEEEE;
+  min-width: 25%;
+  max-width: 25%;
+  height: 45px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.div_descr_6 {
+  float: left;
+  background-color: #EEEEEE;
+  min-width: 25%;
+  max-width: 25%;
+  height: 45px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.div_descr_4 {
+  float: left;
+  background-color: #EEEEEE;
+  min-width: 25%;
+  max-width: 25%;
+  height: 45px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.div_descr_5 {
+  float: left;
+  background-color: #EEEEEE;
+  min-width: 25%;
+  max-width: 25%;
+  height: 45px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.clear {
+  clear: both;
+}
+
+
+.content {
+  display: block;
+  margin: 10px;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+.main_pic{
+  float: top;
+  min-width: 1000px;
+  min-height: 150px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  background-image: url("greeting_pic.jpg");
+  background-size: 100%;
+  background-position: 100% bottom;
+  color: white;
+}
+
+
+#go_top_btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #5F9EA0; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#go_top_btn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.go_back_btn {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #5F9EA0 ; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none !important;
+}
+
+.go_back_btn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    color: white;
+}
+
+.scrollup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 300px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+#scrollup:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#open_list_btn {
+    min-width: 75%;
+    max-width: 75%;
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.add_form {
+  text-align: right;
+}
+
+.text_align_right {
+  text-align: right;  
+}
+.text_align_left {
+  text-align: left;
+}
+
+ /* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #CD5C5C; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+} 
+.comment {
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  margin-top: 10px;
+}
+  .comment strong {
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+    line-height: 1;
+  }
+    .delete_btn {
+      text-decoration: none !important;
+      color: #8A2A21;
+    }
+#hotel_room_desc {
+  resize:vertical; 
+  max-height:300px; 
+  min-height:200px;
+}
+.alert-success {
+  background-color: #66CDAA;
+}
+
+.div_preview_enrty {
+  border-radius: 5px;
+  border: 10px solid #A2C4CF;
+  overflow: hidden !important;
+  min-width: 500px;
+  width: 95%;
+  height: 264px;
+  cursor: pointer;
+  margin: 15px;
+  text-decoration: none !important;
+  color: #242424;
+  background-color: #A2C4CF;
+
+}
+  .div_preview_pic {
+    width: 35%;
+    height: 100%;
+    float: left; 
+    /* margin-left: 2px; */
+  }
+    .div_preview_pic img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        /* border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px; */
+    }
+
+  .div_preview_text {
+    float: right;
+    width: 64%;
+    height: 100%;
+    /* margin-left: 3px; */
+    border-radius: 3px;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+    .div_preview_title {
+      background-color: #EEEEEE;
+      height: 30px;
+      padding-left: 5px;
+      font-family: $openSans;
+      font-weight: bolder;
+      text-align: left;
+      font-size: 24px;
+      /* border-bottom: 1px solid #28525D; */
+    }
+    .div_preview_decr {
+      background-color: #EEEEEE;
+      padding: 4px 5px 0 5px;
+      height: 200px;
+      text-align: justify;
+      vertical-align: text-top;
+      overflow-y: hidden !important;
+      /* border-bottom: 1px solid #28525D; */
+    }
+    .div_preview_icons {
+      height: 30px;
+      width: 100%;
+      overflow: hidden;
+    }
+        .div_preview_likes, .div_preview_stars, .div_preview_food {
+          /*border-right-style: solid;
+          border-width: 1px;
+          border-color: #28525D;
+          padding-right: -1px;*/
+        }
+        .div_preview_likes {
+          background-color: #EEEEEE;
+          float: left;
+          height: 100%;
+          width: 20%;
+        }
+        .div_preview_stars {
+          background-color: #EEEEEE;
+          float: left;
+          height: 100%;
+          width: 20%;
+        }
+        .div_preview_food {
+          background-color: #EEEEEE;
+          float: left;
+          height: 100%;
+          width : 20%;
+        }
+        .div_preview_dollar {
+          background-color: #EEEEEE;
+          float: right;
+          height: 31px;
+          width: 40%;
+          overflow: hidden;
+        }
+
+.add_hotel_form {
+  float: right;
+}
+.add_hotel_pic {
+  float: left;
+}

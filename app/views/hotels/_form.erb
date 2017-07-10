@@ -1,0 +1,114 @@
+<%= form_for @hotel, html: { multipart: true } do |f| %>
+
+  <% if @hotel.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <div id="error_explanation">
+            <h2>
+              <%= pluralize(@hotel.errors.count, "error") %> prohibited
+              this hotel from being saved:
+            </h2>
+            <ul>
+              <% @hotel.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div> 
+      </div>
+  <% end %>
+
+<div class="add_hotel_form">
+    <!-- 1 -->
+    <div class="row">
+      <div class="span2">
+        <%= f.label :title %>
+      </div>
+      <div class="span4">
+          <%= f.text_field :title, placeholder: "Your hotel name"%>
+      </div>
+    </div>
+
+    <!-- 2 -->
+
+    <div class="row">
+      <div class="span2">
+        <%= f.label :star_rating %>
+      </div>
+      <div class="span4">
+        <%= f.select(:star_rating, options_for_select([['1', '1'], 
+                          ['2', '2'],['3', '3'],['4', '4'],['5', '5']])) %>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="row">
+      <div class="span2">
+        <%= f.label :breakfast %>
+      </div>
+      <div class="span4">
+        <%= f.select(:breakfast, options_for_select([['yes', 'yes'], 
+                              ['no', 'no']],{ include_blank: true }))  %>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="row">
+      <div class="span2">
+        <%= f.label :room_desc %>
+      </div>
+      <div class="span4">
+        <%= f.text_area :room_desc, placeholder: "Tell about your hotel" %>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="row">
+      <div class="span2">
+        <%= f.label :price %>
+      </div>
+      <div class="span4">
+        <%= f.text_field :price, placeholder: "Amount" %>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="row">
+      <div class="span2">
+        <%= f.label :address %>
+      </div>
+      <div class="span4">
+        <%= f.text_field :address, placeholder: "Tell your hotel address" %>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="row">
+      <div class="span2"><%= f.label :image %></div>
+      <div class="span1">
+        <div class="field">
+          <label class="btn btn-info btn-block ">
+            <div hidden><%= f.file_field :image %></div>
+            <i class="fa fa-upload" aria-hidden="true"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+        <div class="span2 offset4 field">
+          <!-- <%= f.submit %> -->
+          <button class="btn btn-large" onclick="$(this).closest('form').submit()">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="add_hotel_pic">
+  <%= image_tag("add_hotel_pic.jpg", :alt => "add_hotel_pic") %>
+</div>
+
+
+<% end %>

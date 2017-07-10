@@ -1,0 +1,24 @@
+<% provide(:title, "Sign in") %>
+<h1>Sign in</h1>
+
+<div class="container container_form hero-unit">
+  <div class="row">
+    <div class="span3 offset1">
+      <%= image_tag("locked.jpg", :alt => "locked") %>
+    </div>
+    <div class="span3 offset1">
+      <%= form_for(:session, url: sessions_path) do |f| %>
+
+        <br />
+
+        <%= f.text_field :email, placeholder: "E-mail" %>
+
+        <%= f.password_field :password, placeholder: "Password" %>
+
+        <%= f.submit "Sign in", class: "btn" %>
+      <% end %>
+
+      <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    </div>
+  </div>
+</div>

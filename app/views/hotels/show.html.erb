@@ -1,0 +1,60 @@
+<div class="container hero-unit">
+  <%= render 'blocks/show_hotel' %>
+  <br />
+  <hr />
+<h1 style="text-align: left;">Comments:</h1>
+<div class="comment">
+  <% @hotel.comments.each do |comment| %> 
+    
+    <p>
+      <div class="row">
+        <div class="span2 text_align_right">
+          <strong><%= comment.user_name %>:</strong> 
+        </div>
+        <div class="span9" style="text-align: justify;">
+          <%= comment.body %>
+        </div>
+        <div class="span1">
+            <% if signed_in? && @hotel.user_id == current_user.id %>
+              <div class="center">
+                <%= link_to '', [comment.hotel, comment],
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' }, 
+                          class: "fa fa-ban fa-lg delete_btn"%>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </p>
+  <% end %>
+</div>
+<br />
+<hr />
+
+<% if signed_in? %> 
+  <h2 style="text-align: left;">Add a comment:</h2>
+  <%= form_for([@hotel, @hotel.comments.build]) do |f| %>
+   <p>
+     <%= f.text_area :body %>
+   </p>
+   <div class="pull-right">
+     <button class="btn btn-info btn-large" id="add_comment_btn" onclick="">Submit</button>
+   </div>
+  <% end %>
+  <% else %>
+  </br>
+  <p>
+    <h2>You should sign up to create a comment</h2>
+  </p>
+<% end %>
+<%= link_to '', root_path, class: "go_back_btn fa fa-arrow-left fa-2x" %>
+</div> 
+
+
+<script type="text/javascript">
+$("button").click(function(){
+    $.ajax({url: "show.html.erb", success: function(result){
+        $(".comment").html(result);
+    }});
+});
+</script>

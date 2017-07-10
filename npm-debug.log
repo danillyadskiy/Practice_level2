@@ -1,0 +1,366 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'csslint' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData csslint
+8 silly fetchNamedPackageData csslint
+9 silly mapToRegistry name csslint
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/csslint
+13 verbose request uri https://registry.npmjs.org/csslint
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 5:02:48 PM
+16 verbose request id 50335281760ec5f2
+17 http request GET https://registry.npmjs.org/csslint
+18 http 200 https://registry.npmjs.org/csslint
+19 verbose headers { server: 'nginx/1.10.1',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'last-modified': 'Wed, 03 May 2017 17:13:18 GMT',
+19 verbose headers   etag: 'W/"590a0fae-8b53"',
+19 verbose headers   'content-encoding': 'gzip',
+19 verbose headers   'cache-control': 'max-age=300',
+19 verbose headers   'content-length': '5435',
+19 verbose headers   'accept-ranges': 'bytes',
+19 verbose headers   date: 'Wed, 21 Jun 2017 14:02:48 GMT',
+19 verbose headers   via: '1.1 varnish',
+19 verbose headers   age: '22',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'x-served-by': 'cache-fra1238-FRA',
+19 verbose headers   'x-cache': 'HIT',
+19 verbose headers   'x-cache-hits': '1',
+19 verbose headers   'x-timer': 'S1498053769.762245,VS0,VE0',
+19 verbose headers   vary: 'Accept-Encoding' }
+20 silly get cb [ 200,
+20 silly get   { server: 'nginx/1.10.1',
+20 silly get     'content-type': 'application/json',
+20 silly get     'last-modified': 'Wed, 03 May 2017 17:13:18 GMT',
+20 silly get     etag: 'W/"590a0fae-8b53"',
+20 silly get     'content-encoding': 'gzip',
+20 silly get     'cache-control': 'max-age=300',
+20 silly get     'content-length': '5435',
+20 silly get     'accept-ranges': 'bytes',
+20 silly get     date: 'Wed, 21 Jun 2017 14:02:48 GMT',
+20 silly get     via: '1.1 varnish',
+20 silly get     age: '22',
+20 silly get     connection: 'keep-alive',
+20 silly get     'x-served-by': 'cache-fra1238-FRA',
+20 silly get     'x-cache': 'HIT',
+20 silly get     'x-cache-hits': '1',
+20 silly get     'x-timer': 'S1498053769.762245,VS0,VE0',
+20 silly get     vary: 'Accept-Encoding' } ]
+21 verbose get saving csslint to /home/dani/.npm/registry.npmjs.org/csslint/.cache.json
+22 verbose makeDirectory /home/dani/.npm creation not in flight; initializing
+23 silly makeDirectory /home/dani/.npm uid: 1000 gid: 1000
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule csslint@1.0.5 checking installable status
+37 silly cache add args [ 'csslint', null ]
+38 verbose cache add spec csslint
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'csslint',
+39 silly cache add   scope: null,
+39 silly cache add   name: 'csslint',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed csslint@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for csslint
+42 info addNameTag [ 'csslint', 'latest' ]
+43 silly mapToRegistry name csslint
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/csslint
+47 verbose addNameTag registry:https://registry.npmjs.org/csslint not in flight; fetching
+48 verbose get https://registry.npmjs.org/csslint not expired, no request
+49 silly addNameTag next cb for csslint with tag latest
+50 silly addNamed csslint@1.0.5
+51 verbose addNamed "1.0.5" is a plain semver version for csslint
+52 silly mapToRegistry name csslint
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry uri https://registry.npmjs.org/csslint
+56 verbose addRemoteTarball https://registry.npmjs.org/csslint/-/csslint-1.0.5.tgz not in flight; adding
+57 verbose addRemoteTarball [ 'https://registry.npmjs.org/csslint/-/csslint-1.0.5.tgz',
+57 verbose addRemoteTarball   '19cc3eda322160fd3f7232af1cb2a360e898a2e9' ]
+58 info retry fetch attempt 1 at 5:02:48 PM
+59 info attempt registry request try #1 at 5:02:48 PM
+60 http fetch GET https://registry.npmjs.org/csslint/-/csslint-1.0.5.tgz
+61 http fetch 200 https://registry.npmjs.org/csslint/-/csslint-1.0.5.tgz
+62 silly fetchAndShaCheck shasum 19cc3eda322160fd3f7232af1cb2a360e898a2e9
+63 verbose addTmpTarball /tmp/npm-23183-6a96f041/registry.npmjs.org/csslint/-/csslint-1.0.5.tgz not in flight; adding
+64 verbose addTmpTarball already have metadata; skipping unpack for csslint@1.0.5
+65 silly cache afterAdd csslint@1.0.5
+66 verbose afterAdd /home/dani/.npm/csslint/1.0.5/package/package.json not in flight; writing
+67 verbose afterAdd /home/dani/.npm/csslint/1.0.5/package/package.json written
+68 silly fetchNamedPackageData clone
+69 silly mapToRegistry name clone
+70 silly mapToRegistry using default registry
+71 silly mapToRegistry registry https://registry.npmjs.org/
+72 silly mapToRegistry uri https://registry.npmjs.org/clone
+73 silly fetchNamedPackageData parserlib
+74 silly mapToRegistry name parserlib
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry uri https://registry.npmjs.org/parserlib
+78 verbose request uri https://registry.npmjs.org/clone
+79 verbose request no auth needed
+80 info attempt registry request try #1 at 5:02:49 PM
+81 http request GET https://registry.npmjs.org/clone
+82 verbose request uri https://registry.npmjs.org/parserlib
+83 verbose request no auth needed
+84 info attempt registry request try #1 at 5:02:49 PM
+85 http request GET https://registry.npmjs.org/parserlib
+86 http 200 https://registry.npmjs.org/parserlib
+87 verbose headers { server: 'nginx/1.10.1',
+87 verbose headers   'content-type': 'application/json',
+87 verbose headers   'last-modified': 'Tue, 28 Feb 2017 04:55:00 GMT',
+87 verbose headers   etag: 'W/"58b502a4-800b"',
+87 verbose headers   'content-encoding': 'gzip',
+87 verbose headers   'cache-control': 'max-age=300',
+87 verbose headers   'content-length': '7690',
+87 verbose headers   'accept-ranges': 'bytes',
+87 verbose headers   date: 'Wed, 21 Jun 2017 14:02:49 GMT',
+87 verbose headers   via: '1.1 varnish',
+87 verbose headers   age: '242',
+87 verbose headers   connection: 'keep-alive',
+87 verbose headers   'x-served-by': 'cache-fra1247-FRA',
+87 verbose headers   'x-cache': 'HIT',
+87 verbose headers   'x-cache-hits': '1',
+87 verbose headers   'x-timer': 'S1498053770.614626,VS0,VE0',
+87 verbose headers   vary: 'Accept-Encoding' }
+88 silly get cb [ 200,
+88 silly get   { server: 'nginx/1.10.1',
+88 silly get     'content-type': 'application/json',
+88 silly get     'last-modified': 'Tue, 28 Feb 2017 04:55:00 GMT',
+88 silly get     etag: 'W/"58b502a4-800b"',
+88 silly get     'content-encoding': 'gzip',
+88 silly get     'cache-control': 'max-age=300',
+88 silly get     'content-length': '7690',
+88 silly get     'accept-ranges': 'bytes',
+88 silly get     date: 'Wed, 21 Jun 2017 14:02:49 GMT',
+88 silly get     via: '1.1 varnish',
+88 silly get     age: '242',
+88 silly get     connection: 'keep-alive',
+88 silly get     'x-served-by': 'cache-fra1247-FRA',
+88 silly get     'x-cache': 'HIT',
+88 silly get     'x-cache-hits': '1',
+88 silly get     'x-timer': 'S1498053770.614626,VS0,VE0',
+88 silly get     vary: 'Accept-Encoding' } ]
+89 verbose get saving parserlib to /home/dani/.npm/registry.npmjs.org/parserlib/.cache.json
+90 http 200 https://registry.npmjs.org/clone
+91 verbose headers { server: 'nginx/1.10.1',
+91 verbose headers   'content-type': 'application/json',
+91 verbose headers   'last-modified': 'Fri, 02 Jun 2017 07:45:39 GMT',
+91 verbose headers   etag: 'W/"593117a3-ff6f"',
+91 verbose headers   'content-encoding': 'gzip',
+91 verbose headers   'cache-control': 'max-age=300',
+91 verbose headers   'content-length': '7155',
+91 verbose headers   'accept-ranges': 'bytes',
+91 verbose headers   date: 'Wed, 21 Jun 2017 14:02:49 GMT',
+91 verbose headers   via: '1.1 varnish',
+91 verbose headers   age: '150',
+91 verbose headers   connection: 'keep-alive',
+91 verbose headers   'x-served-by': 'cache-fra1247-FRA',
+91 verbose headers   'x-cache': 'HIT',
+91 verbose headers   'x-cache-hits': '3',
+91 verbose headers   'x-timer': 'S1498053770.612472,VS0,VE0',
+91 verbose headers   vary: 'Accept-Encoding' }
+92 silly get cb [ 200,
+92 silly get   { server: 'nginx/1.10.1',
+92 silly get     'content-type': 'application/json',
+92 silly get     'last-modified': 'Fri, 02 Jun 2017 07:45:39 GMT',
+92 silly get     etag: 'W/"593117a3-ff6f"',
+92 silly get     'content-encoding': 'gzip',
+92 silly get     'cache-control': 'max-age=300',
+92 silly get     'content-length': '7155',
+92 silly get     'accept-ranges': 'bytes',
+92 silly get     date: 'Wed, 21 Jun 2017 14:02:49 GMT',
+92 silly get     via: '1.1 varnish',
+92 silly get     age: '150',
+92 silly get     connection: 'keep-alive',
+92 silly get     'x-served-by': 'cache-fra1247-FRA',
+92 silly get     'x-cache': 'HIT',
+92 silly get     'x-cache-hits': '3',
+92 silly get     'x-timer': 'S1498053770.612472,VS0,VE0',
+92 silly get     vary: 'Accept-Encoding' } ]
+93 verbose get saving clone to /home/dani/.npm/registry.npmjs.org/clone/.cache.json
+94 silly resolveWithNewModule parserlib@1.1.1 checking installable status
+95 silly cache add args [ 'parserlib@~1.1.1', null ]
+96 verbose cache add spec parserlib@~1.1.1
+97 silly cache add parsed spec Result {
+97 silly cache add   raw: 'parserlib@~1.1.1',
+97 silly cache add   scope: null,
+97 silly cache add   name: 'parserlib',
+97 silly cache add   rawSpec: '~1.1.1',
+97 silly cache add   spec: '>=1.1.1 <1.2.0',
+97 silly cache add   type: 'range' }
+98 silly addNamed parserlib@>=1.1.1 <1.2.0
+99 verbose addNamed ">=1.1.1 <1.2.0" is a valid semver range for parserlib
+100 silly addNameRange { name: 'parserlib', range: '>=1.1.1 <1.2.0', hasData: false }
+101 silly mapToRegistry name parserlib
+102 silly mapToRegistry using default registry
+103 silly mapToRegistry registry https://registry.npmjs.org/
+104 silly mapToRegistry uri https://registry.npmjs.org/parserlib
+105 verbose addNameRange registry:https://registry.npmjs.org/parserlib not in flight; fetching
+106 silly resolveWithNewModule clone@2.1.1 checking installable status
+107 silly cache add args [ 'clone@~2.1.0', null ]
+108 verbose cache add spec clone@~2.1.0
+109 silly cache add parsed spec Result {
+109 silly cache add   raw: 'clone@~2.1.0',
+109 silly cache add   scope: null,
+109 silly cache add   name: 'clone',
+109 silly cache add   rawSpec: '~2.1.0',
+109 silly cache add   spec: '>=2.1.0 <2.2.0',
+109 silly cache add   type: 'range' }
+110 silly addNamed clone@>=2.1.0 <2.2.0
+111 verbose addNamed ">=2.1.0 <2.2.0" is a valid semver range for clone
+112 silly addNameRange { name: 'clone', range: '>=2.1.0 <2.2.0', hasData: false }
+113 silly mapToRegistry name clone
+114 silly mapToRegistry using default registry
+115 silly mapToRegistry registry https://registry.npmjs.org/
+116 silly mapToRegistry uri https://registry.npmjs.org/clone
+117 verbose addNameRange registry:https://registry.npmjs.org/clone not in flight; fetching
+118 verbose get https://registry.npmjs.org/parserlib not expired, no request
+119 silly addNameRange number 2 { name: 'parserlib', range: '>=1.1.1 <1.2.0', hasData: true }
+120 silly addNameRange versions [ 'parserlib',
+120 silly addNameRange   [ '0.1.5',
+120 silly addNameRange     '0.1.6',
+120 silly addNameRange     '0.1.8',
+120 silly addNameRange     '0.2.0',
+120 silly addNameRange     '0.2.1',
+120 silly addNameRange     '0.2.2',
+120 silly addNameRange     '0.2.3',
+120 silly addNameRange     '0.2.4',
+120 silly addNameRange     '0.2.5',
+120 silly addNameRange     '1.0.0',
+120 silly addNameRange     '1.1.0',
+120 silly addNameRange     '1.1.1' ] ]
+121 silly addNamed parserlib@1.1.1
+122 verbose addNamed "1.1.1" is a plain semver version for parserlib
+123 silly mapToRegistry name parserlib
+124 silly mapToRegistry using default registry
+125 silly mapToRegistry registry https://registry.npmjs.org/
+126 silly mapToRegistry uri https://registry.npmjs.org/parserlib
+127 verbose addRemoteTarball https://registry.npmjs.org/parserlib/-/parserlib-1.1.1.tgz not in flight; adding
+128 verbose addRemoteTarball [ 'https://registry.npmjs.org/parserlib/-/parserlib-1.1.1.tgz',
+128 verbose addRemoteTarball   'a64cfa724062434fdfc351c9a4ec2d92b94c06f4' ]
+129 verbose get https://registry.npmjs.org/clone not expired, no request
+130 silly addNameRange number 2 { name: 'clone', range: '>=2.1.0 <2.2.0', hasData: true }
+131 silly addNameRange versions [ 'clone',
+131 silly addNameRange   [ '0.0.0',
+131 silly addNameRange     '0.0.1',
+131 silly addNameRange     '0.0.2',
+131 silly addNameRange     '0.0.3',
+131 silly addNameRange     '0.0.4',
+131 silly addNameRange     '0.0.5',
+131 silly addNameRange     '0.0.6',
+131 silly addNameRange     '0.0.7',
+131 silly addNameRange     '0.1.0',
+131 silly addNameRange     '0.1.1',
+131 silly addNameRange     '0.1.2',
+131 silly addNameRange     '0.1.3',
+131 silly addNameRange     '0.1.4',
+131 silly addNameRange     '0.1.5',
+131 silly addNameRange     '0.1.6',
+131 silly addNameRange     '0.1.7',
+131 silly addNameRange     '0.1.8',
+131 silly addNameRange     '0.1.9',
+131 silly addNameRange     '0.1.10',
+131 silly addNameRange     '0.1.11',
+131 silly addNameRange     '0.1.12',
+131 silly addNameRange     '0.1.13',
+131 silly addNameRange     '0.1.14',
+131 silly addNameRange     '0.1.15',
+131 silly addNameRange     '0.1.16',
+131 silly addNameRange     '0.1.17',
+131 silly addNameRange     '0.1.18',
+131 silly addNameRange     '0.2.0',
+131 silly addNameRange     '0.1.19',
+131 silly addNameRange     '1.0.0',
+131 silly addNameRange     '1.0.1',
+131 silly addNameRange     '1.0.2',
+131 silly addNameRange     '2.0.0',
+131 silly addNameRange     '2.1.0',
+131 silly addNameRange     '2.1.1' ] ]
+132 silly addNamed clone@2.1.1
+133 verbose addNamed "2.1.1" is a plain semver version for clone
+134 silly mapToRegistry name clone
+135 silly mapToRegistry using default registry
+136 silly mapToRegistry registry https://registry.npmjs.org/
+137 silly mapToRegistry uri https://registry.npmjs.org/clone
+138 verbose addRemoteTarball https://registry.npmjs.org/clone/-/clone-2.1.1.tgz not in flight; adding
+139 verbose addRemoteTarball [ 'https://registry.npmjs.org/clone/-/clone-2.1.1.tgz',
+139 verbose addRemoteTarball   'd217d1e961118e3ac9a4b8bba3285553bf647cdb' ]
+140 info retry fetch attempt 1 at 5:02:49 PM
+141 info attempt registry request try #1 at 5:02:49 PM
+142 http fetch GET https://registry.npmjs.org/parserlib/-/parserlib-1.1.1.tgz
+143 info retry fetch attempt 1 at 5:02:49 PM
+144 info attempt registry request try #1 at 5:02:49 PM
+145 http fetch GET https://registry.npmjs.org/clone/-/clone-2.1.1.tgz
+146 http fetch 200 https://registry.npmjs.org/parserlib/-/parserlib-1.1.1.tgz
+147 http fetch 200 https://registry.npmjs.org/clone/-/clone-2.1.1.tgz
+148 silly fetchAndShaCheck shasum d217d1e961118e3ac9a4b8bba3285553bf647cdb
+149 verbose addTmpTarball /tmp/npm-23183-6a96f041/registry.npmjs.org/clone/-/clone-2.1.1.tgz not in flight; adding
+150 verbose addTmpTarball already have metadata; skipping unpack for clone@2.1.1
+151 silly cache afterAdd clone@2.1.1
+152 verbose afterAdd /home/dani/.npm/clone/2.1.1/package/package.json not in flight; writing
+153 verbose afterAdd /home/dani/.npm/clone/2.1.1/package/package.json written
+154 silly fetchAndShaCheck shasum a64cfa724062434fdfc351c9a4ec2d92b94c06f4
+155 verbose addTmpTarball /tmp/npm-23183-6a96f041/registry.npmjs.org/parserlib/-/parserlib-1.1.1.tgz not in flight; adding
+156 verbose addTmpTarball already have metadata; skipping unpack for parserlib@1.1.1
+157 silly cache afterAdd parserlib@1.1.1
+158 verbose afterAdd /home/dani/.npm/parserlib/1.1.1/package/package.json not in flight; writing
+159 verbose afterAdd /home/dani/.npm/parserlib/1.1.1/package/package.json written
+160 silly loadAllDepsIntoIdealTree Finishing
+161 silly idealTree:prePrune lib
+161 silly idealTree:prePrune └─┬ csslint@1.0.5
+161 silly idealTree:prePrune   ├── clone@2.1.1
+161 silly idealTree:prePrune   └── parserlib@1.1.1
+162 silly loadIdealTree Finishing
+163 silly currentTree lib
+164 silly idealTree lib
+164 silly idealTree └─┬ csslint@1.0.5
+164 silly idealTree   ├── clone@2.1.1
+164 silly idealTree   └── parserlib@1.1.1
+165 silly generateActionsToTake Starting
+166 silly install generateActionsToTake
+167 warn checkPermissions Missing write access to /usr/local/lib
+168 silly rollbackFailedOptional Starting
+169 silly rollbackFailedOptional Finishing
+170 silly runTopLevelLifecycles Starting
+171 silly runTopLevelLifecycles Finishing
+172 silly install printInstalled
+173 verbose stack Error: EACCES: permission denied, access '/usr/local/lib'
+173 verbose stack     at Error (native)
+174 verbose cwd /home/dani/rails_projects/sample_app
+175 error Linux 4.8.0-54-generic
+176 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "csslint"
+177 error node v4.2.6
+178 error npm  v3.5.2
+179 error path /usr/local/lib
+180 error code EACCES
+181 error errno -13
+182 error syscall access
+183 error Error: EACCES: permission denied, access '/usr/local/lib'
+183 error     at Error (native)
+183 error  { [Error: EACCES: permission denied, access '/usr/local/lib']
+183 error   errno: -13,
+183 error   code: 'EACCES',
+183 error   syscall: 'access',
+183 error   path: '/usr/local/lib' }
+184 error Please try running this command again as root/Administrator.
+185 verbose exit [ -13, true ]

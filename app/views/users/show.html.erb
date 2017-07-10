@@ -1,0 +1,33 @@
+<% provide(:title, @user.name) %>
+<div class="row container center hero-unit">
+  <aside class="span12">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <% if @user.hotels.any? %>
+      <% @hotel.each do |hotel| %>
+      <hr />
+        <%= render :partial => 'blocks/preview', 
+                    :locals => {:hotel => hotel} %>
+        <div class="text_align_left">
+          &nbsp; &nbsp;
+
+          <div class="btn-group btn-group-large">
+            <%= link_to '', edit_hotel_path(hotel), class: "btn btn-warning btn-large fa fa-pencil-square-o fa-5x" %>
+            <%= link_to '', hotel_path(hotel), class: "btn btn-danger btn-large fa fa-trash fa-5x",
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+          </div>
+        
+
+          
+          
+        </div>
+      <% end %>
+    <%= will_paginate @hotel %>
+  <% end %>
+</div>

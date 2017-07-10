@@ -1,0 +1,20 @@
+<% if signed_in? %>
+  <% if @hotel.votes.exists?(:user_id => current_user.id) || @hotel.user_id == current_user.id %>
+     <!-- <%= pluralize(@hotel.votes.count, "vote") %> -->
+     <!-- <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> -->
+     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+     &emsp;-&emsp;<%= @hotel.votes.count %>
+     <% else %>
+
+      <%= form_for([@hotel, @hotel.votes.build]) do |f| %>
+        <div class="fa fa-thumbs-o-up" onclick="$(this).closest('form').submit()" 
+                                  style="cursor: pointer;"></div>
+        &emsp;-&emsp;<%= @hotel.votes.count %>
+     <% end %>
+  <% end %>
+  <% else %>
+      <%= form_for([@hotel, @hotel.votes.build]) do |f| %>
+        <div class="fa fa-thumbs-up"></div>
+        &emsp;-&emsp;<%= @hotel.votes.count %>    
+  <% end %>
+<% end %>

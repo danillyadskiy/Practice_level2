@@ -1,0 +1,26 @@
+<% provide(:title, '') %>
+<div class="main_pic container-fluid">
+    <br /><br /><br /><br />
+    <div class="greeting_text" hidden>
+        <h1 class="greeting_text">Find the lowest price on the right hotel for you</h1>
+    </div>
+    <div class="slogan_text" style="font-family: 'Open Sans', sans-serif;" hidden>
+        <center><h2><strong> 
+        'Hotel App' is the only hotel site that sends special investigators to visit, 
+        photograph, review, and rate each hotel. We inspect in-person — just like your 
+        mother-in-law.
+        </strong></h2></center>
+    </div>
+</div>
+<div class="container center hero-unit">
+    <center>
+    <h1>List of hotels</h1>
+	<hr />
+        <% @hotel.each do |hotel| %>
+
+
+        <%= render :partial => 'blocks/preview', 
+                    :locals => {:hotel => hotel} %>
+    <% end %>
+    </center>
+</div>

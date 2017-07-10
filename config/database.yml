@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+
+development:
+  <<: *default
+  database: db/development
+  username: dani
+  password: 111
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: db/test
+  pool: 5
+  username: dani
+  password: 111
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: db/production
+  pool: 5
+  username: dani  
+  password: 111
+
+cucumber:
+  <<: *TEST

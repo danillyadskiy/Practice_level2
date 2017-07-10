@@ -1,0 +1,34 @@
+<header class="navbar navbar-fixed-top navbar-collapse" id="top_menu"
+role="navigation">
+  <div class="navbar navbar-custom">
+    <div class="container navbar-custom">
+      <%= link_to image_tag('rs_logo.png', width: 37) + "Rails Station", root_path, id: "logo" %>
+
+      <nav>
+        <ul class="nav pull-right" id="nav_refs">
+          <li><%= link_to "Main board", root_path, { :class=>"nav_links" } %></li>
+          <li><%= link_to "List of hotels", listOfHotels_path, { :class=>"nav_links" } %></li>
+          <% if signed_in? %>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle nav_links" data-toggle="dropdown">
+                Account <b class="caret" style="caret-color: #fff;"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user, { :class=>"nav_links" } %></li>
+                <li><%= link_to "Add hotel", '/hotels/new', { :class=>"nav_links" } %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user), { :class=>"nav_links" }  %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, class: "nav_links", method: "delete" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path, { :class=>"nav_links" } %></li>
+            <li><%= link_to "Sign up now!", signup_path, { :class=>"nav_links" } %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

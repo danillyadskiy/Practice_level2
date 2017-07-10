@@ -1,0 +1,42 @@
+
+<span class="content">
+    <%= link_to hotel_path(hotel) do %> 
+		<div class="div_preview_enrty" >
+			<div class="div_preview_pic">
+				<%= image_tag hotel.image.thumb.url %>
+			</div>
+
+			<div class="div_preview_text" >
+				<div class="div_preview_title">
+					<%= hotel.title %>
+				</div>
+
+				<div class="div_preview_decr">
+					<p><%= hotel.room_desc %></p>
+				</div>
+
+				<div class="div_preview_icons">
+					<div class="div_preview_likes">
+				      <%= form_for([hotel, hotel.votes.build]) do |f| %>
+				        <div class="fa fa-thumbs-up"></div>
+				         &ndash; <%= hotel.votes.count %>    
+				      <% end %>
+					</div>
+					<div class="div_preview_stars">
+						<i class="fa fa-star" aria-hidden="true"></i>
+						 &ndash; <%= hotel.star_rating %>
+					</div>
+					<div class="div_preview_food">
+						<i class="fa fa-cutlery" aria-hidden="true"></i>
+						 &ndash; <%= hotel.breakfast %>
+					</div>
+					<div class="div_preview_dollar">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+						 &ndash; <%= hotel.price %>
+				</div>
+				</div>
+			
+			</div>
+		</div>
+	<% end %>
+</span>

@@ -1,0 +1,30 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="container container_form hero-unit">
+  <div class="row">
+    <div class="span3 offset1" style="float: left;">
+      <%= image_tag("new_user.png", :alt => "sign_up") %>
+    </div>
+    <div class="span3 offset1" style="font-family: FontAwesome;">
+      
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+        <%= f.text_field :name, placeholder: "Name"%>
+
+        <!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
+        <%= f.text_field :email, placeholder: "E-mail" %>
+
+        <!-- <i class="fa fa-unlock-alt" aria-hidden="true"></i> -->
+        <%= f.password_field :password, placeholder: "Password" %>
+
+        <!-- <i class="fa fa-unlock-alt" aria-hidden="true"></i> -->
+        <%= f.password_field :password_confirmation, placeholder: "Confirmation" %>
+
+        <%= f.submit "Create my account", class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>	

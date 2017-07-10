@@ -1,0 +1,1 @@
+RewriteRule !\.(js|ico|gif|jpg|jpeg|svg|bmp|png|css|pdf|swf|mp3|mp4|3gp|flv|avi|rm|mpeg|wmv|xml|doc|docx|xls|xlsx|csv|ppt|pptx|zip|rar|mov)$ index.php

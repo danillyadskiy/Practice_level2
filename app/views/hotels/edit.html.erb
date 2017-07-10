@@ -1,0 +1,7 @@
+<% if signed_in? && @hotel.user_id == current_user.id %>
+<h1>Edit Hotel</h1>
+<div class="center container hero-unit">
+	<%= render 'form' %>
+</div>
+<%= link_to '', current_user, class: "go_back_btn fa fa-arrow-left fa-2x" %>
+<% end %>
